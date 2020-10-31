@@ -9,8 +9,9 @@ export default async function handleRequest(
       if (request.headers.get('Zeplin-Signature') === zeplinKey) {
         return await handleZeplin(request)
       }
-      return new Response('This is not a valid Zeplin Request!', {
-        status: 500,
+
+      return new Response('', {
+        status: 204,
       })
     } catch (e) {
       return new Response(`Error! ${e}`, { status: 500 })

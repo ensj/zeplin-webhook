@@ -108,13 +108,7 @@ async function sendToDiscord(
 export default async function handleZeplin(
   request: Request,
 ): Promise<Response> {
-  let reqBody: ZeplinWebhookBodyType
-  try {
-    reqBody = await request.json()
-  } catch (e) {
-    // this is for catching Zeplin's test request.
-    return new Response('Congratulations! You failed', { status: 200 })
-  }
+  const reqBody: ZeplinWebhookBodyType = await request.json()
 
   const responseMessage: DiscordWebhookMessageType = handleZeplinEvent(reqBody)
 
