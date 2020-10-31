@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import { expect } from 'chai'
-import { handleRequest } from '../src/handler'
+import handleRequest from '../src/handler'
 
 describe('handler returns response with request method', () => {
   const methods = [
