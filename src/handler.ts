@@ -64,5 +64,5 @@ async function handleZeplin(request: Request): Promise<Response> {
     return response
   }
 
-  return new Response('Invalid or untracked Zeplin event', { status: 500 })
+  return new Response('Invalid or untracked Zeplin event', { status: 200 })
 }
