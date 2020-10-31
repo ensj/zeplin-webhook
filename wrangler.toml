@@ -1,0 +1,7 @@
+name = "zeplin-webhook"
+type = "webpack"
+account_id = "080d1d34f994cb3358a2e6a9d8e78c6d"
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
